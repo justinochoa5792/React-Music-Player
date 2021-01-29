@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #152129;
+}
+
+h1 {
+  color: #fff;
+  font-family: "Nerko One";
+  font-size: xx-large;
+}
+
+.btn {
+  height: 60px;
+  width: 60px;
+}
+
+.container {
+  background-color: #3e3c3f;
+  width: 400px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#canvas_element {
+  position: absolute;
+  top: 0;
+  left: 50;
+}
+
+.img {
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+}
+
+.song-info h1 {
+  font-size: 4rem;
+  color: #fff;
+  font-family: "Nerko One";
+  margin: 0;
+}
+
+.song-info p {
+  color: #ddd;
+  font-family: "san-serif";
+}
+
+.controller {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+}
+
+input {
+  width: 90%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  appearance: none;
+  height: 1px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::-webkit-slider-thumb {
+  appearance: none;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+.animation-spin {
+  animation-name: spin;
+  animation-timing-function: linear;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .img,
+  #canvas_element {
+    width: 250px;
+    height: 250px;
+  }
+  .container {
+    background: none;
+  }
+  .song-info h1 {
+    font-size: 3rem;
+  }
+}
